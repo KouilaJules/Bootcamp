@@ -1,0 +1,32 @@
+{% load static %}
+    <table>
+        <tr>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{form.as_table}}
+                <input type="submit" value="Envoyer">
+            </form>
+        </tr>
+    </table>
+  
+    <div>
+        <table  border="1">
+            
+            <tr>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Adresse</th>
+            </tr>
+           
+            <tb>   
+                {% for locataire in locataires%}
+                <tr>
+                    <td>{{locataire.nom}}</td><br>    
+                    <td>{{locataire.prenom}}</td><br>   
+                    <td>{{locataire.adress}}</td><br>  
+                </tr>    
+                {% endfor %} 
+            </tb>    
+        </table> 
+        
+    </div>
