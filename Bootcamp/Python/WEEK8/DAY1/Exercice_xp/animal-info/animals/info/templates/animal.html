@@ -1,0 +1,55 @@
+<html>
+<head>
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>   
+<body>
+
+    
+    <h5>Animals</h5>
+    <table class=" table table-striped table-hover container">
+        <thead class="table-dark">
+          <tr>
+            <td>
+                <h5>id</h5>
+            </td>
+            <td>
+                <h5>name</h5>
+            </td>
+            <td>
+                <h5>legs</h5>
+            </td>
+            <td>
+                <h5>weight</h5>
+            </td>
+            <td>
+                <h5>height</h5>
+            </td>
+            <td>
+                <h5>speed</h5>
+            </td>
+            <td>
+                <h5>family</h5>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+           
+                
+                <tr>
+                    <td type="button" class="btn btn-danger bg-danger " >{{ ani.id }} </td>                
+                    <td>{{ ani.name }}</td> 
+                    <td>{{ ani.legs}}</td> 
+                    <td>{{ ani.weight }}</td> 
+                    <td>{{ ani.height }}</td> 
+                    <td>{{ ani.speed}}</td>
+                    <td>{{ ani.family}}</td>                 
+                </tr>
+                           
+            
+        </tbody>
+      </table>
+</body> 
+</html>

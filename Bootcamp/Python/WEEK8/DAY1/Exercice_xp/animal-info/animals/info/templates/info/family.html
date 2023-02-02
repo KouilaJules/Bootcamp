@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <table>
+        {% for a in list  %}
+         {% if a == list.0 %}
+         <tr>
+             {% for  y in a.keys  %}
+                 <td>{{y}}</td>
+             {% endfor %}    
+         </tr>
+         {% endif %}
+         <tr>
+             {% for z in a.values %}
+             <td>{{z}}</td>
+             {% endfor %}
+         </tr> 
+         {% endfor %}
+     </table>
+{% endblock content %} 
+        
