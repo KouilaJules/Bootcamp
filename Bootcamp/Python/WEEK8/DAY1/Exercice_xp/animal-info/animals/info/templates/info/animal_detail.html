@@ -1,0 +1,13 @@
+
+
+{% extends 'info/base.html' %}
+
+{% block title %}{{ animal.family }} - {{ animal.id }}{% endblock %}
+
+{% block content %}
+    <h1>{{ animal.family }} - {{ animal.id }}</h1>
+    <ul>
+        <li>Legs: {{ animal.legs }}</li>
+        <li>Weight: {{ animal.weight }}</li>
+        <li>Height: {{ animal.height}}</li>
+    <ul>    

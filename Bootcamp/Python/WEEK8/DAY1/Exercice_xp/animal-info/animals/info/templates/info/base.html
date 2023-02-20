@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Animal Info{% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'animal_list' %}">Animal List</a>
+        <ul>
+            {% for family in families %}
+            <li><a href="{% url 'family_detail' family.id %}">{{ family.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
+       
+
+
+
+
+
+
+
